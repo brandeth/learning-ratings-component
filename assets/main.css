@@ -86,7 +86,7 @@ body {
 }
 
 .main {
-    margin: 0 1rem;
+    margin: 0 1.75rem;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -114,7 +114,8 @@ body {
 }
 
 .rating {
-    background: linear-gradient(to bottom, var(--dark-blue), hsla(213, 19%, 18%,0.5));
+    /* Radial gradient from top dark-blue to very-dark-blue */
+    background: radial-gradient(ellipse at top, var(--dark-blue) 0%, hsla(213, 19%, 18%, 0.4) 100%);
     border-radius: 2rem;
     padding: 3rem;
     max-width: 40rem;
@@ -140,6 +141,14 @@ body {
     color: var(--white);
     font-weight: 700;
     margin-bottom: 1rem;
+}
+
+.rating-selected {
+  color: var(--orange);
+  border-radius: 3rem;
+  padding: 0.5rem 2rem;
+  background-color:hsla(216, 12%, 54%, 0.1);
+  margin-bottom: 3rem;
 }
 
 .rating-submit {
@@ -168,6 +177,33 @@ body {
   background-color: var(--white);
   transition: 0.1s ease;
   color: var(--orange);
+}
+
+.rating-thank-you {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-thank-you img {
+  margin-bottom: 2rem;
+}
+
+.rating-thank-you-title {
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.rating-thank-you span {
+  margin-right: 0.5rem;
+}
+
+.rating-thank-you-body {
+  text-align: center;
+  margin-top: 0;
 }
 
 .round-container {
